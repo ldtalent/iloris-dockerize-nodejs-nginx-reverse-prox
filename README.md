@@ -1,27 +1,20 @@
-## Martian MongoDB
+## Ilori's DOCKERIZED NODEJS & NGINX MICROSERVICE
 
-This is the mongodb flavour for the martian javascript framework. Built on top of the Javascript runtime and owned by the entire Martian community. MartianJs is built to help developers build **Microservices || API** in javascript faster.
+This microservice was built on top of an **Express Js Scratch Web server**. You can find a link to the Git repo [here](https://github.com/harryWonder/martian/tree/martian_mongo). This microservice which is built on top of NGINX & NodeJs was built to demonstrate how to use Nginx as a reverse proxy, spin up multiple instances of your NodeJs application and load balance them using a round robin approach.
 
-There are several flavours still being developed, but this is our most recent version. This version has it's database in MongoDB and is packed with several packages to make development easier.
+## Getting Started
 
-### Getting Started
+1. Clone this project
+2. Get Docker & Docker Compose Installed. You can install docker from this [link](https://www.docker.com/get-started).
+3. Verify your docker && docker-compose installation has been completed.
+4. Open the cloned project in your application terminal.
+5. Run the command ```$
+docker-compose up --scale martian_mongo_flavour=3 ```
+6. Navigate to your browser and open this url **http://127.0.0.1:3050/api/v1/welcome**. You should get a message verifying that your app is good to go.
 
-Interested in being a martian or you're interested in building our ecosystem? You're welcome onboard. Follow the guidelines below and let's explore the galaxy together.
+## Need Help
 
-1. Clone this repo **Mind the version pal!**
-2. Run **npm install**
-3. Update the **.env** in the **root directory** to suit your needs.
-4. You should see an output in your terminal saying `we are running on port 4400 martians!`
-5. Open your browser and hit either of the following routes: `http://127.0.0.1:4400/api/v1/inspire` or `http://127.0.0.1:4400/api/v1/welcome`.
-6. Got Docker installed? You can do a **docker-compose up** to get started.
-
-### Notice
-
-1. This application depends heavily on **redis** and **mongodb**. This two pacakges should be installed on your computer. You should be fine if you are connecting to a remote server or you are using docker.
-
-#### Need Help
-
-In case you run into any trouble, Open an issue or send a mail to [stephenilori458@gmail.com](mailto:stephenilori458@gmail.com) and we will send help as soon as we can.
+In case you run into any trouble, Open an issue or send a mail to stephenilori458@gmail.com and we will send help as soon as we can.
 
 ## Contributing
 
