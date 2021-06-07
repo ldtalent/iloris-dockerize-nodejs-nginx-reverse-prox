@@ -5,16 +5,12 @@ services:
     build: .
     env_file:
       - .env.testing
-    container_name: martian_mongo
     links:
       - martian_mongo_db
       - martian_redis_db
     depends_on:
       - martian_mongo_db
       - martian_redis_db
-    ports:
-    - "4400:4400"
-    - "3000:4400"
     volumes:
     - ".:/usr/src/app"
   martian_redis_db:
@@ -28,3 +24,11 @@ services:
     ports:
       - "27017:27017"
     command: --quiet
+  martian_mongo_nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    depends_on:
+      - martian_mongo_flavour
+    ports:
+      - "3050:3050"
